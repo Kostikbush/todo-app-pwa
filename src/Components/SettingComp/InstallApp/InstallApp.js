@@ -3,11 +3,23 @@ import { AppContext } from "../../../context/context";
 import '../SetTodos/setTodos.scss';
 import {IoIosArrowDown} from 'react-icons/io'
 import { Btn } from "../../Btn/Btn";
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    deferredPrompt = e;
+});
 export const InstallApp = () => {
     const {theme} = useContext(AppContext);
     const [showSet, setShowSet] = useState(false);
 
-    const handleInstallApp =()=> {
+    const handleInstallApp = async ()=> {
+        if (deferredPrompt !== null) {
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            if (outcome === 'accepted') {
+                deferredPrompt = null;
+            }
+        }
     }
     return (
         <div className={`${theme}-wrapper-setting-color ${showSet ? 'sets' : 'set-hide'} `}>
