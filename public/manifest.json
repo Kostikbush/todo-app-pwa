@@ -1,0 +1,87 @@
+{
+"description": "", 
+"shortcuts": [
+  {
+    "name": "Start Live Session",
+    "short_name": "Start Live",
+    "description": "Jump direction into starting or joining a live session",
+    "url": "/?startLive",
+    "icons": [
+      {
+        "src": "icon-192x192.png",
+        "sizes": "192x192"
+      }
+    ]
+  }
+], 
+  "name": "TodoYoursDay",
+  "short_name": "Goday",
+  "icons": [
+    {
+      "src": "icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon-256x256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "icon-384x384.png",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "iconApp72.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "iconApp120.png",
+      "type": "image/png",
+      "sizes": "120x120"
+    },
+    {
+      "src": "iconApp128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "iconApp152.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "iconApp180.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "iconApp.ico",
+      "type": "image/ico",
+      "sizes": "256x189",
+      "purpose":"maskable"
+    }
+  ],
+  "theme_color": "#ec4899",
+  "background_color": "#111827",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "index.html",
+  "screenshots": [
+    {
+      "src": "screensh.jpg",
+      "sizes": "320x320",
+      "type": "image/jpg"
+    }
+  ],
+  "prefer_related_applications": false
+}
+
