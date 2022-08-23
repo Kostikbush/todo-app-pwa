@@ -1,0 +1,146 @@
+@keyframes todo-add {
+    0% {
+      transition: .5s all;
+      transform: translateY(-400px);
+    }
+    100%{
+      transition: .5s all;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes todo-remove {
+    0% {
+      transition: .5s all;
+      opacity: 1;
+      transform: translateX(-100px);
+    }
+    100%{
+      transition: .5s all;
+      opacity: 0;
+      transform: translateX(-800px);
+    }
+  }
+  .note-enter {
+    animation: todo-add;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 2;
+    animation-fill-mode: fill;
+    animation-direction: normal;
+  }
+  .note-exit {
+    opacity: 1;
+    animation: todo-remove;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 2;
+    animation-fill-mode: fill;
+    animation-direction: normal;
+  }
+  .note-exit-active {
+    opacity: 1;
+    animation: todo-remove;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 2;
+    animation-fill-mode: fill;
+    animation-direction: normal;
+    opacity: 0;
+    transition: opacity 300ms;
+  }
+  .note-enter-active {
+    animation: todo-add;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 2;
+    animation-fill-mode: fill;
+    animation-direction: normal;
+    opacity: 1;
+    transition: opacity 300ms;
+  }
+
+  .write-transi{
+    transition:all .3s ;
+  }
+
+
+  .write-transi-enter {
+  
+    transition:all .3s ;
+  }
+  
+  .write-transi-exit{
+    transition:all .3s ;
+  
+  }
+  
+  
+  .write-transi-enter-active {
+    opacity: 0;
+    transform: translateX(400px);
+    transition:all .3s ;
+  }
+  
+  .write-transi-exit-active{
+    opacity: 0;
+    transform: translateX(400px);
+    transition:all .3s ;
+  }
+
+
+.origin-wrapper-list-todos{
+  background-color: #2a3344;
+  border-radius: 10px;
+  text-align: center;
+  & h2{
+    font-size: 25px;
+    
+  }
+}
+.light-wrapper-list-todos{
+  background-color: transparent;
+  border: black 2px solid;
+  border-radius: 10px;
+  color: black;
+  text-align: center;
+  & h2{
+    font-size: 25px;
+    
+  }
+}
+.dark-wrapper-list-todos{
+  background-color: transparent;
+  border: white 2px solid;
+  border-radius: 10px;
+  text-align: center;
+  & h2{
+    font-size: 25px;
+    
+  }
+}
+.transfo {
+  transition: .3s all;
+  transform: translateX(-2000px);
+}
+
+.size-h2 h2{
+  font-size: 25px;
+}
+
+.h-wrapper {
+  transition: .3s all;
+  height: 75px;
+}
+
+.h-auto-wrapper {
+  transition: .3s all;
+  height: auto;
+  
+}
+
+.progress__ring {
+  position: absolute;
+  left: -50px;
+  top: -40px;
+}

@@ -1,0 +1,30 @@
+@mixin setting-item-wrapper-hide() {
+    transition: all 0.3s;
+    margin-top: 50px;
+    border-radius: 10px;
+    text-align: center;
+    height: 85px;
+}
+
+.theme-wrapper-hide {
+    @include setting-item-wrapper-hide()
+}
+
+.hide-wrapper-font{
+    @include setting-item-wrapper-hide()
+}
+
+.set-hide {
+    @include setting-item-wrapper-hide();
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    height: 85px;
+    border-radius: 10px;
+    transition: .3s all;
+    text-transform: uppercase;
+}

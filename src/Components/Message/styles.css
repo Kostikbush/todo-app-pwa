@@ -1,0 +1,158 @@
+body {
+    font-family: sans-serif;
+  }
+  
+  .container {
+    position: relative;
+  }
+  
+  .origin-display {
+    position: relative;
+    color: white;
+    z-index: 1;
+    width: 120px;
+    height: 40px;
+    background-color: #ec4899;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 350ms;
+  }
+  .dark-display {
+    position: relative;
+    color: white;
+    z-index: 1;
+    width: 120px;
+    height: 40px;
+    background-color: transparent;
+    border: solid white;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 350ms;
+  }
+  .origin-display:active {
+    background-color: #a32c8bfb;
+  }
+  .light-display {
+    position: relative;
+    color: black;
+    z-index: 1;
+    width: 120px;
+    background-color: transparent;
+    border: solid black;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 350ms;
+  }
+  .origin-list-body {
+    position: absolute;
+    top: 45px;
+    z-index: 1;
+    box-sizing: border-box;
+    width: 80%;
+    padding: 0 20px;
+    overflow: hidden;
+    background-color: #1f2937;
+    border-radius: 5px;
+    color:white;
+  }
+
+  .dark-list-body {
+    position: absolute;
+    top: 55px;
+    z-index: 1;
+    box-sizing: border-box;
+    width: 80%;
+    padding: 0 20px;
+    overflow: hidden;
+    border: solid white;
+    border-radius: 5px;
+    color:white;
+  }
+
+  .light-list-body {
+    position: absolute;
+    top: 45px;
+    z-index: 1;
+    box-sizing: border-box;
+    width: 80%;
+    padding: 0 20px;
+    overflow: hidden;
+    background-color: transparent;
+    border: solid black;
+    border-radius: 5px;
+    color:black;
+  }
+
+  .light-bg-list-body {
+    background-color: white;
+  }
+  .dark-bg-list-body {
+    background-color: black;
+  }
+  .origin-bg-list-body {
+    background-color: #1f2937;
+  }
+  
+  .list {
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .list-item {
+    padding: 2px 0;
+  }
+  
+  .origin-list-item--active {
+    color: rgb(166, 8, 150);
+    transition: color 1500ms;
+  }
+  .dark-list-item--active {
+    color: white;
+    transition: color 1500ms;
+  }
+  .light-list-item--active {
+    color: black;
+    transition: color 1500ms;
+  }
+  
+  /* This fires as soon as the element enters the dorm */
+  .list-transition-enter,
+  .list-transition-appear {
+    /*We give the list the initial dimension of the list button*/
+    top: 0;
+    width: 100%;
+    max-height: 40px;
+    color: transparent;
+    background-color: transparent;
+  }
+  /* This is where we can add the transition*/
+  .list-transition-enter-active,
+  .list-transition-appear-active {
+    top: 45px;
+    width: 100%;
+    max-height: 200px;
+    background-color: transparent;
+    transition: all 400ms;
+  }
+  
+  /* This fires as soon as the this.state.showList is false */
+  .list-transition-exit {
+    top: 45px;
+    width: 100%;
+    max-height: 200px;
+    background-color: transparent;
+  }
+  /* fires as element leaves the DOM*/
+  .list-transition-exit-active {
+    top: 0;
+    width: 100%;
+    max-height: 40px;
+    color: transparent;
+    background-color: transparent;
+    transition: all 400ms;
+  }
+  

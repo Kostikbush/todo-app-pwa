@@ -1,0 +1,789 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+$origin-item-color: #ec4899;
+$darck-item-color: #000;
+$light-item-color: #fff;
+@mixin orgin-wrapper-shadow{
+  box-shadow: 1px 12px 35px rgba(209, 0, 160, 0.762);
+} 
+@mixin light-wrapper-shadow {
+  box-shadow: 1px 12px 35px rgba(56, 56, 56, 0.762);
+}
+@mixin darck-wrapper-shadow {
+  box-shadow: 1px 12px 35px rgba(201, 201, 201, 0.762);
+}
+
+
+button,
+input,
+optgroup,
+select,
+textarea,html input[type="button"],
+input[type="reset"],
+input[type="submit"],button[disabled],
+html input[disabled],button::-moz-focus-inner,
+input::-moz-focus-inner, input[type="checkbox"],
+input[type="radio"], input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button, input[type="search"], input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+@keyframes notes {
+  0% {
+    opacity: 0.8;
+    transform: translateX(0);
+  }
+  30% {
+      opacity: .5;
+      transform: translateX(30px);
+    }
+  100% {
+    opacity: 0;
+    transform: translateX(-230px);
+  }
+}
+
+
+
+
+.break-words {
+  word-break: break-all;
+}
+
+
+
+.buttons {
+  display: flex;
+}
+
+@media(max-width:500px){
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .mr-4 {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+}
+.custom-input {
+  padding: 3px;
+  border-radius: 8px;
+}
+
+.custom-form {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.icon__setting-enter {
+  transform: rotate(10deg);
+}
+.icon__setting-exit {
+  transform: rotate(10deg);
+}
+.icon__setting-exit-active {
+  transform: rotate(-280deg);
+  transition: transform 400ms ease-in;
+}
+.icon__setting-enter-active {
+  transform: rotate(280deg);
+  transition: transform 400ms ease-in;
+}
+
+
+
+.setting-body {
+  margin: 0 auto;
+  border-radius: 20px;
+  padding:0 30px 0 30px;
+  position: absolute;
+  top: 1%;
+  left: 13%;
+  width: 75%;
+  z-index: 1000;
+}
+@media(max-width: 400px){
+  .setting-body {
+    margin: 0 auto;
+    border-radius: 20px;
+    padding:0 10px 0 10px;
+    position: absolute;
+    top: 1%;
+    left: 13%;
+    width: 75%;
+    z-index: 1000;
+  }
+}
+
+.app-fill {
+  filter: blur(3px);
+}
+.set-enter {
+  opacity: 0;
+  transform: scale(0.2);
+}
+
+
+.set-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.set-exit {
+  opacity: 1;
+}
+
+
+.set-exit-active {
+  opacity: 0;
+  transform: scale(0.1);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.light {
+  color: black;
+  background-color: white;
+  border-radius: 0.75em;
+  padding: 5px;
+  position: relative;
+}
+
+.dark {
+  color: white;
+  background-color: black;
+  border-radius: 0.75em;
+  padding: 5px;
+  position: relative;
+}
+
+.origin {
+  color: white;
+  background-color: #111827;
+  border-radius: 0.75em;
+  padding: 5px;
+  position: relative;
+}
+
+
+
+button.btn {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 0.75em;
+  transition: transform 0.15s;
+  transform-style: preserve-3d;
+  text-transform: uppercase;
+  padding: 4px 6px;
+}
+button.light{
+  color: #000000;
+  background: #ededed;
+  border: 2px solid #000000;
+
+}
+
+button.light::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #a1a1a1;
+  border-radius: inherit;
+  box-shadow: 1px 2px 3px 2px #262626, 0 0.222em 2px 2px #2a2a2a;
+  transform: translate3d(0, 0.75em, -1em);
+  transition: transform 0.15s, box-shadow 0.15s;
+  z-index: 1;
+}
+
+
+
+button.light:hover {
+  background: #ffffff;
+  transform: translate(0, 0.25em);
+}
+button.light:hover::before {
+  box-shadow: 0px 0px 0px 0px #c4c4c4, 0 0.333em 6px 0px #bababa;
+  transform: translate3d(0, 0.5em, -1em);
+}
+button.light:active {
+  background: #f3f3f3;
+  transform: translate(0em, 0.75em);
+}
+button.light:active::before {
+  box-shadow: 0 0 0 2px #a7a7a7, 0 0 #9b9b9b;
+  transform: translate3d(0, 0, -1em);
+}
+
+
+
+
+button.dark{
+  color: #eeeeee;
+  background: #121212;
+  border: 1px solid #ffffff;
+
+}
+
+
+button.dark::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2e2e2e;
+  border-radius: inherit;
+  box-shadow: 1px 2px 3px 2px #414141, 0 0.333em 2px 2px #383838;
+  transform: translate3d(0, 0.75em, -1em);
+  transition: transform 0.15s, box-shadow 0.15s;
+  z-index: 1;
+}
+
+button.dark:hover {
+  background: #000000;
+  transform: translate(0, 0.25em);
+}
+button.dark:hover::before {
+  box-shadow: 0px 0px 0px 0px #727272, 0 0.222em 6px 2px #787878;
+  transform: translate3d(0, 0.5em, -1em);
+}
+button.dark:active {
+  background: #000000;
+  transform: translate(0em, 0.75em);
+}
+button.dark:active::before {
+  box-shadow: 1px 2px 3px 2px #414141, 0 0.333em 2px 2px #383838;
+  transform: translate3d(0, 0, -1em);
+}
+
+.btn-aset {
+  width: 80%;
+  height: 50px;
+  margin-top: 10px;
+  transition: .3s all;
+  opacity: 1;
+}
+
+.btn {
+  margin: 20px;
+}
+
+button.origin{
+  color: #ffffff;
+  background: #111827;
+  border: 1px solid #ec4899;
+}
+
+
+button.origin::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #0a101c;
+  border-radius: inherit;
+  box-shadow: 0px 0px 0px 0px #e36da8, 0 0.222em 6px 2px #fe90c7;
+  transform: translate3d(0, 0.75em, -1em);
+  transition: transform 0.15s, box-shadow 0.15s;
+  z-index: 1;
+}
+
+button.origin:hover {
+  background: #111827;
+  transform: translate(0, 0.25em);
+}
+button.origin:hover::before {
+  box-shadow: 0px 0px 0px 0px #ec4899, 0 0.222em 6px 2px #ec4899;
+  transform: translate3d(0, 0.5em, -1em);
+}
+button.origin:active {
+  background: #111827;
+  transform: translate(0em, 0.75em);
+}
+button.origin:active::before {
+  box-shadow: 1px 2px 3px 2px #ec4899, 0 0.333em 2px 2px #ec4899;
+  transform: translate3d(0, 0, -1em);
+}
+
+
+
+@media(max-width:670px){
+  button.b {
+    margin: 10px 0;
+    font-weight: 500;
+    font-size: 12px;
+    height: 30px;
+    width: 120px;
+  }
+}
+
+@media(max-width:580px){
+  .media-theme {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
+  }
+}
+
+.body-light {
+  background-color: white;
+}
+.body-dark {
+  background-color: black;
+}
+.body-origin {
+  background-color: #111827;
+}
+.light-form-add {
+    border-color: black;
+    color: black;
+  }
+.dark-form-add {
+    border-color: white;
+    color: white;
+  }
+
+.origin-form-add {
+    border-color: #ec4899;
+    color: white;
+  }
+
+
+  .origin-icon-setting {
+    color: #ec4899;
+  }
+
+  .dark-icon-setting {
+    color: white;
+  }
+
+  
+  .light-icon-setting {
+    color: black;
+  }
+
+
+.origin-icon-form {
+  color: rgb(236 72 153);
+}
+
+.origin-icon-form:hover {
+  color: rgb(255, 95, 175);
+}
+
+.dark-icon-form {
+  color: rgb(158, 158, 158);
+}
+
+.dark-icon-form:hover {
+  color: rgb(255, 255, 255);
+}
+
+
+.light-icon-form {
+  color: rgb(110, 110, 110);
+}
+
+.light-icon-form:hover {
+  color: rgb(0, 0, 0);
+}
+
+
+.light-form-item {
+  border: solid black;
+  border-color: black;
+  color: black;
+}
+.dark-form-item {
+  border: solid white;
+  border-color: white;
+  color: white;
+}
+
+.origin-form-item {
+  border-color: #ec4899;
+  background-color: #202735;
+  color: white;
+}
+
+
+
+.light-form-change {
+  border: solid black;
+  border-color: black;
+  color: black;
+}
+.dark-form-change {
+  border: solid white;
+  border-color: white;
+  color: white;
+}
+
+.origin-form-change {
+  border-color: #ec4899;
+  background-color: #202735;
+  color: white;
+}
+
+
+
+
+
+
+
+
+.light-chenge-input {
+  border: solid black;
+  border-color: black;
+  color: black;
+}
+.dark-chenge-input {
+  border: solid white;
+  border-color: white;
+  color: white;
+}
+
+.origin-chenge-input {
+  border: solid #111827;
+  background-color: transparent;
+  color: white;
+}
+
+
+
+
+
+
+
+  .light-setting-change {
+    background-color: white;
+    box-shadow: 1px 12px 35px rgb(52, 58, 91);
+    color: black;
+  }
+  .dark-setting-change {
+    background-color: black;
+    box-shadow: 1px 12px 35px rgb(52, 58, 91);
+    color: white;
+  }
+  
+  .origin-setting-change {
+    background-color: #202735;
+    box-shadow: 1px 12px 35px rgb(209, 0, 161);
+    color: white;
+  }
+
+
+
+
+
+.light-border-check{
+  border: solid black;
+  color: white;
+}
+.origin-border-check {
+  border: solid #ec4899;
+  color: white;
+}
+.dark-border-check {
+  border: solid white;
+  color: black;
+  }
+
+
+  .light-check-theme{
+    background-color: black;
+  }
+  .origin-check-theme {
+    background-color: #ec4899;
+  }
+  .dark-check-theme {
+    background-color: #fff;
+    }
+
+
+
+
+
+    .light-MyText {
+      transition: all .5s;
+      position: relative;
+    }
+    .light-MyText:after {
+      content: '';
+      position: absolute;
+      top: 45%;
+      display: block;
+      width: 100%;
+      background-color: black;
+      height: 4px;
+      transition: all 1s ease-in-out;
+      animation-name: none;
+      animation-duration: .7s;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+      animation-fill-mode: fill;
+      animation-direction: normal;
+    }
+    
+    
+    .light-MyTextNoneLine {
+      transition: all .5s;
+      position: relative;
+    }
+    .light-MyTextNoneLine:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      display: block;
+      width: 0%;
+      background-color: black;
+      height: 4px;
+      transition: all .6s ease-in-out;
+      animation-name: none;
+      animation-duration: .7s;
+      animation-timing-function: linear;
+      animation-iteration-count: 2;
+      animation-fill-mode: fill;
+      animation-direction: normal;
+    } 
+
+
+
+
+
+
+
+    .dark-MyText {
+      transition: all .5s;
+      position: relative;
+    }
+    .dark-MyText:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      display: block;
+      width: 100%;
+      background-color: white;
+      height: 4px;
+      transition: all 1s ease-in-out;
+      animation-name: none;
+      animation-duration: .7s;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+      animation-fill-mode: fill;
+      animation-direction: normal;
+    }
+    
+    
+    .dark-MyTextNoneLine {
+      transition: all .5s;
+      position: relative;
+    }
+    .dark-MyTextNoneLine:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      display: block;
+      width: 0%;
+      background-color: white;
+      height: 4px;
+      transition: all .6s ease-in-out;
+      animation-name: none;
+      animation-duration: .7s;
+      animation-timing-function: linear;
+      animation-iteration-count: 2;
+      animation-fill-mode: fill;
+      animation-direction: normal;
+    } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .origin-MyText {
+      transition: all .5s;
+      position: relative;
+    }
+    .origin-MyText:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      display: block;
+      width: 100%;
+      background-color: #ec4899;
+      height: 4px;
+      transition: all 1s ease-in-out;
+      animation-name: none;
+      animation-duration: .7s;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+      animation-fill-mode: fill;
+      animation-direction: normal;
+    }
+    
+    
+    .origin-MyTextNoneLine {
+      transition: all .5s;
+      position: relative;
+    }
+    .origin-MyTextNoneLine:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      display: block;
+      width: 0%;
+      background-color: #ec4899;
+      height: 4px;
+      transition: all .6s ease-in-out;
+      animation-name: none;
+      animation-duration: .7s;
+      animation-timing-function: linear;
+      animation-iteration-count: 2;
+      animation-fill-mode: fill;
+      animation-direction: normal;
+    } 
+
+    @keyframes none {
+      0% {
+        width: 100%;
+      }
+      20% {
+        width: 80%;
+      }
+      40% {
+        width: 60%;
+      }
+      60% {
+        width: 40%;
+      }
+      90%{
+        width: 10%;
+      }
+      100% {
+        width: 0;
+      }
+    }
+
+
+    @media(max-width:867px){
+      .origin-MyTextNoneLine:after {
+        display: none;
+      }
+      .light-MyTextNoneLine:after {
+        display: none;
+      }
+      .dark-MyTextNoneLine:after {
+        display: none;
+      }
+      .origin-MyText:after {
+        display: none;
+      }
+      .light-MyText:after {
+        display: none;
+      }
+      .dark-MyText:after {
+        display: none;
+      }
+      .light-MyText {
+        text-decoration: line-through black 4px;
+      }
+  
+      .dark-MyText {
+        text-decoration: line-through white 4px;
+      }
+  
+      .origin-MyText {
+        text-decoration: line-through #ec4899 4px;
+      }
+    }
+    
+    input::placeholder {
+      margin-left: 5px;
+      padding-left: 5px;
+    }
+
+@media(max-width: 670px){
+  .btn-aset {
+    width: 80%;
+    height: 50px;
+    margin-top: 10px;
+    transition: .3s all;
+}
+}
+

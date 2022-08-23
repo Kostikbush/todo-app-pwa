@@ -1,0 +1,24 @@
+export const LOADER_ON = 'LOADER_ON';
+export const LOADER_OFF = 'LOADER_OFF';
+export const ADD_TODO = 'TODO_ADD';
+export const REMOVE_TODO = 'REMOVE_TODO';
+export const COMPLETED_TODO = 'COMPLETED_TODO'; 
+export const SAVED_SETTINGS = 'SAVED_SETTINGS';
+export const SAVED_TODOS = 'SAVED_TODOS';
+export const SORT_ARR = 'SORT_ARR';
+export const WRIGHT_CHANGE = 'WRIGHT_CHANGE';
+export const TIMES_UP = 'TIMES_UP';
+export const GET_TODOS = 'GET_TODOS';
+export const GET_SETTINGS = 'GET_SETTINGS';
+export const NOT_COMPLETED_TODO = 'NOT_COMPLETED_TODO';
+export const REMOVE_ALL_TO_DAY_TODO = 'REMOVE_ALL_TO_DAY_TODO';
+export const REMOVE_ALL_COMPLETED_TODO = 'REMOVE_ALL_COMPLETED_TODO';
+export const REMOVE_ALL_TIMES_UP_TODO = 'REMOVE_ALL_TIMES_UP_TODO'; 
+export const CHANGE_THEME = 'CHANGE_THEME';
+export const CHANGE_FONT = 'CHANGE_FONT';
+export const PLAY_MUSIC = 'PLAY_MUSIC';
+export const SHOW_ALERT = 'SHOW_ALERT';
+export const DELETE_ALL_TODOS = 'DELETE_ALL_TODOS';
+
+
+

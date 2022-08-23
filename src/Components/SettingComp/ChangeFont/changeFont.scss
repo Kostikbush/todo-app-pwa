@@ -1,0 +1,280 @@
+@font-face {
+	font-family: 'Beer money';
+	src: url('../../../font/beermoney/beermoney.woff2') format('woff2'), url('../../../font/beermoney/beermoney.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gunny Rewritten';
+	src: url('../../../font/gunnyRewritten/GunnyRewritten.woff2') format('woff2'), url('../../../font/gunnyRewritten/GunnyRewritten.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'MADE TheArtist Script';
+	src: url('../../../font/artist/MADETheArtistScript.woff2') format('woff2'), url('../../../font/artist/MADETheArtistScript.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Nautilus Pompilius';
+	src: url('../../../font/nautilys/NautilusPompilius.woff2') format('woff2'), url('../../../font/nautilys/NautilusPompilius.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Christmas ScriptC';
+	src: url('../../../font/cristmas/ChristmasScriptC.woff2') format('woff2'), url('../../../font/cristmas/ChristmasScriptC.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Alexander';
+	src: url('../../../font/alexandr/Alexander.woff2') format('woff2'), url('../../../font/alexandr/Alexander.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Boomboom';
+	src: url('../../../font/boom/Boomboom.woff2') format('woff2'), url('../../../font/boom/Boomboom.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Marck Script';
+	src: url('../../../font/marck/MarckScript-Regular.woff2') format('woff2'), url('../../../font/marck/MarckScript-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Lemon Tuesday';
+	src: url('../../../font/lemon/LemonTuesday.woff2') format('woff2'), url('../../../font/lemon/LemonTuesday.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gagalin';
+	src: url('../../../font/gagalin/Gagalin-Regular.woff2') format('woff2'), url('../../../font/gagalin/Gagalin-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Celestina';
+	src: url('../../../font/celestina/Celestina.woff2') format('woff2'), url('../../../font/celestina/Celestina.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Engine';
+	src: url('../../../font/engine/Engine-Regular.woff2') format('woff2'), url('../../../font/engine/Engine-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Kobzar KS';
+	src: url('../../../font/kobzac/KobzarKS.woff2') format('woff2'), url('../../../font/kobzac/KobzarKS.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Lobster';
+	src: url('../../../font/lobster/Lobster.woff2') format('woff2'), url('../../../font/lobster/Lobster.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Bradobrei';
+	src: url('../../../font/bradobrei/Bradobrei.woff2') format('woff2'), url('../../../font/bradobrei/Bradobrei.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+@mixin bg-shadow-li-font {
+	box-shadow: 1px 12px 35px rgb(52 58 91);
+}
+.bradobrei {
+	font-size: 15px;
+font-family: 'Bradobrei';
+}
+.lobster {
+	font-family: 'Lobster';
+}
+.kobzar{
+	font-size: 21px;
+	font-family: 'Kobzar KS';
+}
+.engine {
+	font-size: 33px;
+	font-family: 'Engine';
+}
+.celestina {
+	font-size: 20px;
+	font-family: 'Celestina';
+}
+.beer-money {
+	font-size: 22px;
+    font-family: 'Beer money';
+}
+
+.gunny-rewritten {
+	font-size: 24px;
+	font-family: 'Gunny Rewritten';
+}
+
+.artist {
+	font-family: 'MADE TheArtist Script';
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.nautilys {
+	font-size: 17px;
+	font-family: 'Nautilus Pompilius';
+}
+
+.christmas {
+	font-family: 'Christmas ScriptC';
+	text-transform: uppercase;
+	display: flex;
+    text-align: center;
+    align-content: center;
+    padding: 3px 5px;
+    margin: 5px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    max-height: 50px;
+}
+
+.alexander {
+	font-size: 17px;
+	font-family: 'Alexander';
+}
+
+.boomboom {
+	font-size:19px;
+	font-family: 'Boomboom';
+}
+
+.marck{
+	font-size: 20px;
+	font-family: 'Marck Script';
+}
+.lemon{
+	font-size: 20px;
+	font-family: 'Lemon Tuesday';
+}
+
+.gagalin {
+	font-size: 25px;
+	font-family: 'Gagalin';
+}
+
+.change-font-wrapper {
+	margin-top: 50px;
+	transition: all .3s;
+	display: flex;
+	flex-direction: column;
+	border-radius: 5px;
+	text-align: center;
+	box-shadow: 0px -2px 28px rgb(52 58 91);
+}
+.sans-seriv {
+	font-family: sans-serif;
+}
+
+.wrapper-list-font {
+	padding: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	transition: all .3s;
+	justify-content: space-between;
+}
+
+
+
+.font-li {
+	display: flex;
+	text-align: center;
+	align-content: center;
+	padding: 3px 5px;
+	margin: 5px 5px;
+	border-radius: 5px;
+	cursor: pointer;
+	max-height: 50px;
+}
+.light-font-li-bg{
+	background-color: white;
+	@include bg-shadow-li-font()
+}
+
+.dark-font-li-bg{
+	background-color: black;
+	@include bg-shadow-li-font()
+}
+
+.origin-font-li-bg{
+	background-color: rgb(17 24 39);
+	@include bg-shadow-li-font()
+}
+
+.origin-font-wrapper-color{
+	box-shadow: 1px 12px 35px rgba(209, 0, 160, 0.762);
+}
+.hide-wrapper-li {
+	width: 350px;
+	display: flex;
+	height: 0;
+	opacity: 0;
+	width: 0;
+	z-index: -1;
+	transform: translateX(-3000px);
+	transition: all .3s;
+}
+
+.h3-font {
+	padding-top: 10px;
+	margin-top: 15px;
+}
+
+@media(max-width: 730px) {
+	.change-font-wrapper  {
+		height: 700px;
+	}
+	.wrapper-list-font{
+		height: 700px;
+	}
+}
+
+
+.engine  {
+	text-align: center;
+	align-content: center;
+}
+
+@media(max-width: 385px){
+	.wrapper-list-font {
+		height: 900px;
+		margin-bottom: 80px;
+	}
+	.change-font-wrapper  {
+		height: 900px;
+	}
+}
+
+.dark-font-wrapper-color{
+	box-shadow: 1px 12px 35px rgba(201, 201, 201, 0.762);
+  }
+  
+.light-font-wrapper-color{
+	box-shadow: 1px 12px 35px rgba(56, 56, 56, 0.762);
+  }
+
+
+
+@media(max-width: 440px){
+	.christmas {
+		font-family: "Christmas ScriptC";
+		text-transform: uppercase;
+		height: 100px;
+		max-height: 70px;
+	}
+}
