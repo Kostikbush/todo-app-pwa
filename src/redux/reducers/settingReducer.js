@@ -16,13 +16,11 @@ const initialState = {
 export const settingReducer = (state=initialState, action) => {
     switch(action.type) {
         case SAVED_SETTINGS:
-            console.log('saved')
             savedIndexDB(state.settingsSaved)
             return {
                 ...state
             }
         case GET_SETTINGS:
-            console.log(state.settingsSaved)
             return {
                 ...state,
                 settingsSaved: action.data
@@ -38,7 +36,6 @@ export const settingReducer = (state=initialState, action) => {
                 state: state.settingsSaved.font = action.data.font
             }
         case SHOW_ALERT: 
-            console.log(state.settingsSaved)
         return {
             ...state,
             state: state.settingsSaved.alert=!state.settingsSaved.alert,

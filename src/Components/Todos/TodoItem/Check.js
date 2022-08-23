@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import {AppContext, TodoContext} from '../../../context/context';
+import {AppContext} from '../../../context/context';
 import {BiCheck} from 'react-icons/bi';
 import { useDispatch } from "react-redux";
 import { arrSots, completeTodo, savedTodos } from "../../../redux/action";

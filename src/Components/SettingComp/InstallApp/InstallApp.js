@@ -6,19 +6,8 @@ import { Btn } from "../../Btn/Btn";
 export const InstallApp = () => {
     const {theme} = useContext(AppContext);
     const [showSet, setShowSet] = useState(false);
-    let deferredPrompt;
 
-    window.addEventListener('beforeinstallprompt', (e) => {
-        deferredPrompt = e;
-    });
-    const handleInstallApp = async ()=> {
-        if (deferredPrompt !== null) {
-            deferredPrompt.prompt();
-            const { outcome } = await deferredPrompt.userChoice;
-            if (outcome === 'accepted') {
-                deferredPrompt = null;
-            }
-        }
+    const handleInstallApp =()=> {
     }
     return (
         <div className={`${theme}-wrapper-setting-color ${showSet ? 'sets' : 'set-hide'} `}>

@@ -27,7 +27,6 @@ export const SetTodos = () => {
             setAlertVue(false)
         },2000)
     }
-    console.log(alertVue)
     return (
         <div className={`relative ${theme}-wrapper-setting-color ${showSet ? 'sets' : 'set-hide'} `}>
             <h3 className={`${showSet ? 'mt-4' : 'mt-10'}`}>Запись</h3>

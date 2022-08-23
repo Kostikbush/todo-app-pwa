@@ -1,14 +1,11 @@
 import { useState, useEffect, useContext } from "react";
 import { TimeCreate } from "./TimeCreate";
 import { Timer } from "./Timer";
-import { useDispatch } from 'react-redux';
-import { savedTodos, timesUp } from "../../../../redux/action";
 import { AppContext } from "../../../../context/context";
 
 
 export const WrapperTimer = ({todo}) => {
     const date = new Date();
-    const dispatch = useDispatch()
     const [isCount, setIsCount] = useState(true);
     const [timeIsNull,setTimeIsNull] = useState(false);
     const [timeItem, setTimeItem] = useState(null);

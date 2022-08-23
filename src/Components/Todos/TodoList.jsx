@@ -63,7 +63,7 @@ const TodoList = () => {
                             {todosToday.length ? <Btn text='Удалить все задачи на сегодня' style={`${theme} btn btn-set`} handleClick={handleRemoveAllTodo}/> : <div className=''>У вас нет задач</div>}
                 </TransitionGroup> 
             </div>
-            <div className={`mb-5 p-1 ${theme}-wrapper-list-todos ${showTodosComplete ? 'h-auto-wrapper' : 'h-wrapper'}`}>
+            {/* <div className={`mb-5 p-1 ${theme}-wrapper-list-todos ${showTodosComplete ? 'h-auto-wrapper' : 'h-wrapper'}`}>
                 <h2>Выполненные дела</h2>
                 <button className={`${showTodosComplete ? 'rotate-180 transition-all' : 'transition-all'}`} onClick={()=>setShowTodosComplete(!showTodosComplete)}><IoIosArrowDown size={20}/></button>
                 <TransitionGroup component='ul' className={`${font} ${showTodosComplete ? 'translate-x-0 transition-all' : 'transfo'}`}>
@@ -105,7 +105,7 @@ const TodoList = () => {
                                 })}
                             {todosTimeUp.length ? <Btn text='Удалить все сгоревшие задачи' style={`${theme} btn btn-set`} handleClick={handleRemoveAllTodo}/> : <div className=''>У вас нет сгоревших задач</div>}
                 </TransitionGroup> 
-            </div>
+            </div> */}
         </div>
     )
 }

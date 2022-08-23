@@ -95,7 +95,7 @@ export const TimerTodo = ({setTimeCompleted}) => {
                         type='number'/>
                     </div>
                 </div>
-                <div className="range__input h-12">
+                <div className="range__input h-14">
                     <input onChange={rangeHours} type="range" className={`${theme}-range`} defaultValue={hours} min="1" max="24"/>
                     <input onChange={rangeMinits} type="range" className={`${theme}-range`} min="0" max="59"/>
                 </div>
