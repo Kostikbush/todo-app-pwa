@@ -7,6 +7,7 @@ import { Btn } from "../../Btn/Btn";
 import { useDispatch } from "react-redux";
 import { changeTheme, savedSettings } from "../../../redux/action";
 import { handleThemeBody } from "../../../style-for-handle-theme/style-theme";
+import { CSSTransition } from "react-transition-group";
 
 export const ChangeTheme = () => {
     const dispatch = useDispatch()
@@ -21,11 +22,18 @@ export const ChangeTheme = () => {
         <div className={`${theme}-wrapper-theme ${showTheme ? 'theme-wrapper-show' : 'theme-wrapper-hide'} w-full flex flex-col align-middle justify-center pb-5`}>
             <h3 className="mt-8">ТЕМА</h3>
             <div className="seting-arrow"><button onClick={handleSettingTheme}><IoIosArrowDown className={`${showTheme ? 'move-arrow-up' : 'move-arrow-down'}`} size={20}/></button></div>
-            <div className={`${showTheme ? 'media-theme-show' : 'media-theme-hide'} flex justify-around p-2`}>
-                <Btn handleClick={handleTheme} style={`btn light`} text='СВЕТЛАЯ'/>
-                <Btn handleClick={handleTheme} style={`btn dark`} text='ТЁМНАЯ'/>
-                <Btn handleClick={handleTheme} style={`btn origin`} text='ОРИГИНАЛЬНАЯ'/>
-            </div>
+            <CSSTransition
+                in={showTheme}
+                timeout={500}
+                classNames='setting-animation'
+                unmountOnExit
+            >
+                <div className={`media-theme-show flex justify-around p-2`}>
+                    <Btn handleClick={handleTheme} style={`btn light`} text='СВЕТЛАЯ'/>
+                    <Btn handleClick={handleTheme} style={`btn dark`} text='ТЁМНАЯ'/>
+                    <Btn handleClick={handleTheme} style={`btn origin`} text='ОРИГИНАЛЬНАЯ'/>
+                </div>
+            </CSSTransition>    
         </div>
     )
 }

@@ -3,7 +3,8 @@
     margin-top: 50px;
     border-radius: 10px;
     text-align: center;
-    height: 85px;
+    align-content: center;
+    height: 100px;
 }
 
 .theme-wrapper-hide {
@@ -23,8 +24,34 @@
     align-items: center;
     justify-content: center;
     margin-top: 50px;
-    height: 85px;
+    height: 100px;
     border-radius: 10px;
-    transition: .3s all;
     text-transform: uppercase;
 }
+
+
+.setting-animation-enter {
+    opacity: 0;
+    transform: translateX(-300px);
+    height: 0;
+  }
+  
+  
+.setting-animation-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 500ms, transform 500ms;
+  }
+  
+  .setting-animation-exit {
+    opacity: 1;
+  }
+  
+  
+  .setting-animation-exit-active {
+    opacity: 0;
+    transform: translateY(-300px);
+    transition: translateX(-300px);
+    height: 0;
+    transition: opacity 500ms, transform 500ms;
+  }

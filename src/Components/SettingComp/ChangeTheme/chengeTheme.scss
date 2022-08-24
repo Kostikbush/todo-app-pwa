@@ -23,15 +23,14 @@
     width: 0;
     height: 0;
     opacity: 0;
-    transform: translateX(-3000px);
-    transition: all .3s;
+    transition: all .1s;
 }
 
 .media-theme-show {
     flex-wrap: wrap;
     width: 100%;
     opacity: 1;
-    transition: all .3s;
+    transition: all .1s;
 }
 
 

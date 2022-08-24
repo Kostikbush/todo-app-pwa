@@ -1,4 +1,4 @@
-export const Btn = ({handleClick, style, text}) => {
+export const Btn = ({handleClick, style, text, styleBtn}) => {
     return (
         <button 
                 onClick={handleClick}

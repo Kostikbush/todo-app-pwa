@@ -12,7 +12,7 @@ export const Alert = (props) => {
     })
     return (
         <div style={props.styles} className={alert ? `flex text-center align-middle  ${theme}-alert-messeg ${props.style} ${font}`: 'hidden'}>
-            {props.text}
+            <span className={`${alert ? '': 'hidden'}`}>{props.text}</span>
         </div>
     )
 }

@@ -134,14 +134,6 @@ font-family: 'Bradobrei';
 .christmas {
 	font-family: 'Christmas ScriptC';
 	text-transform: uppercase;
-	display: flex;
-    text-align: center;
-    align-content: center;
-    padding: 3px 5px;
-    margin: 5px 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    max-height: 50px;
 }
 
 .alexander {
@@ -185,21 +177,25 @@ font-family: 'Bradobrei';
 	padding: 10px;
 	display: flex;
 	flex-wrap: wrap;
-	transition: all .3s;
+	transition: all .1s;
 	justify-content: space-between;
 }
 
 
 
 .font-li {
-	display: flex;
 	text-align: center;
 	align-content: center;
 	padding: 3px 5px;
-	margin: 5px 5px;
 	border-radius: 5px;
 	cursor: pointer;
 	max-height: 50px;
+	width: 320px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	max-width: 100%;
+	max-height: 110px;
 }
 .light-font-li-bg{
 	background-color: white;
@@ -219,29 +215,9 @@ font-family: 'Bradobrei';
 .origin-font-wrapper-color{
 	box-shadow: 1px 12px 35px rgba(209, 0, 160, 0.762);
 }
-.hide-wrapper-li {
-	width: 350px;
-	display: flex;
-	height: 0;
-	opacity: 0;
-	width: 0;
-	z-index: -1;
-	transform: translateX(-3000px);
-	transition: all .3s;
-}
-
 .h3-font {
 	padding-top: 10px;
 	margin-top: 15px;
-}
-
-@media(max-width: 730px) {
-	.change-font-wrapper  {
-		height: 700px;
-	}
-	.wrapper-list-font{
-		height: 700px;
-	}
 }
 
 
@@ -250,15 +226,6 @@ font-family: 'Bradobrei';
 	align-content: center;
 }
 
-@media(max-width: 385px){
-	.wrapper-list-font {
-		height: 900px;
-		margin-bottom: 80px;
-	}
-	.change-font-wrapper  {
-		height: 900px;
-	}
-}
 
 .dark-font-wrapper-color{
 	box-shadow: 1px 12px 35px rgba(201, 201, 201, 0.762);
@@ -267,14 +234,3 @@ font-family: 'Bradobrei';
 .light-font-wrapper-color{
 	box-shadow: 1px 12px 35px rgba(56, 56, 56, 0.762);
   }
-
-
-
-@media(max-width: 440px){
-	.christmas {
-		font-family: "Christmas ScriptC";
-		text-transform: uppercase;
-		height: 100px;
-		max-height: 70px;
-	}
-}

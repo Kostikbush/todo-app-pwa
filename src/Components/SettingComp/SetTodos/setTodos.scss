@@ -6,7 +6,6 @@
     align-items: center;
     justify-content: center;
     margin-top: 50px;
-
     height: 160px;
     border-radius: 10px;
     text-transform: uppercase;
@@ -23,8 +22,8 @@
     transform: rotate(180deg);
 }
 .btn-hide-set {
-    transition: .3s all opacity;
-    transform: translateX(-2000px);
+    transition: .1s all;
+    transform: translateX(-20px);
     opacity: 0;
 }
 

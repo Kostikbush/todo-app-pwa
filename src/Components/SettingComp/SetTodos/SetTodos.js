@@ -29,9 +29,9 @@ export const SetTodos = () => {
     }
     return (
         <div className={`relative ${theme}-wrapper-setting-color ${showSet ? 'sets' : 'set-hide'} `}>
-            <h3 className={`${showSet ? 'mt-4' : 'mt-10'}`}>Запись</h3>
+            <h3 className={`${showSet ? 'mt-4' : 'mt-2'}`}>Запись</h3>
             <button onClick={()=> setShowSet(!showSet)}><IoIosArrowDown className={`${showSet ? 'set-arrow-down' : 'set-arrow-up'}`} size={20}/></button>
-            <Btn handleClick={handleSetText} style={`${showSet ? `${theme} btn-aset  btn btn-set` : 'btn-hide-set'}`} text='записать задачи в txt фаил?'/>
+            <Btn handleClick={handleSetText} style={`${showSet ? `${theme} btn-aset  btn btn-set` : 'btn-hide-set hidden'}`} text='записать задачи в txt фаил?'/>
             <CSSTransition   
                 in={alertVue}            
                 timeout={500}

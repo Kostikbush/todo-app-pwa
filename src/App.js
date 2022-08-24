@@ -55,7 +55,8 @@ const loading = useSelector(state => {
               in={settingVeu}
               timeout={500}
               classNames='set'
-              unmountOnExit>
+              unmountOnExit
+              >
               <Setting/>
         </CSSTransition>
         <div className={`App ${settingVeu ? 'app-fill' : ''} text-rose-50`}>
