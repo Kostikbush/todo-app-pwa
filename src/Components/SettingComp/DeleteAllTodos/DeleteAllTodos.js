@@ -16,7 +16,7 @@ export const DeleteAllTodos = () => {
 
     return (
         <div className={`${theme}-wrapper-setting-color ${showSet ? 'sets' : 'set-hide'} `}>
-            <h3 className='mt-2'>Удалить все задачи</h3>
+            <h3  className='mt-2'>Удалить все задачи</h3>
             <button onClick={()=> setShowSet(!showSet)}><IoIosArrowDown className={`${showSet ? 'set-arrow-down' : 'set-arrow-up'}`} size={20}/></button>
             <Btn handleClick={handledelete} style={`${showSet ? `${theme} btn-aset  btn btn-set` : 'btn-hide-set hidden'}`} text='Удалить все задачи'/>
         </div>
