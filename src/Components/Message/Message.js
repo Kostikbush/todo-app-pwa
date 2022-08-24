@@ -18,7 +18,6 @@ const Message = ({settingVeu, setSettingVeu}) => {
   const listSwitch = () => {
     setHighlightedHobby(!highlightedHobby)
     };
-    console.log(showList)
     return (
       <div className={`${settingVeu ? 'app-fill' : ''} "container" ${font}`} >
         <button className={`${theme}-display ${font}`} onClick={Onswitch}>
