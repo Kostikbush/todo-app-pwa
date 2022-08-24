@@ -18,6 +18,7 @@ export const useSetting = () => {
         handleSettings,
         handleSettingFont,
         handleSettingTheme,
+        setSettingVeu,
         showTheme,
         showFont,
         settingVeu

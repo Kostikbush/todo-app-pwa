@@ -28,6 +28,7 @@ const loading = useSelector(state => {
   const {
     handleSettings,
     settingVeu,
+    setSettingVeu
   } = useSetting();
   handleThemeBody(theme);
   useEffect(()=> {
@@ -38,7 +39,7 @@ const loading = useSelector(state => {
     <React.Fragment>
       <AppContext.Provider value={{theme, font, loading}}>
         <div className={`${font} flex justify-between`}>
-          <Message settingVeu={settingVeu}/> 
+          <Message setSettingVeu={setSettingVeu} settingVeu={settingVeu}/> 
           <CSSTransition
             in={settingVeu}
             timeout={400}

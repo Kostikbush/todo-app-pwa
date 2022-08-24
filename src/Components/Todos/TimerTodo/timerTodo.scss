@@ -1,19 +1,25 @@
 .show-clock {
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 40%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     width: 200px;
-    height: 200px;
+    height: 300px;
     border-radius: 10px;
     z-index: 100;
 }
 @media(max-width: 500px){
     .show-clock {
         position: absolute;
-        top: 55%;
+        top: 35%;
         left: 32%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
         width: 200px;
-        height: 200px;
+        height: 300px;
         border-radius: 10px;
         z-index: 100;
     }
@@ -21,10 +27,13 @@
 @media(max-width: 380px){
     .show-clock {
         position: absolute;
-        top: 55%;
+        top: 35%;
         left: 22%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
         width: 200px;
-        height: 200px;
+        height: 300px;
         border-radius: 10px;
         z-index: 100;
     }

@@ -32,8 +32,8 @@
 
 .setting-animation-enter {
     opacity: 0;
-    transform: translateX(-300px);
-    height: 0;
+    transform: translateX(-50px);
+    transition: .5s all;
   }
   
   
@@ -44,14 +44,13 @@
   }
   
   .setting-animation-exit {
+    transition: .5s all;
     opacity: 1;
   }
   
   
   .setting-animation-exit-active {
     opacity: 0;
-    transform: translateY(-300px);
-    transition: translateX(-300px);
-    height: 0;
+    transition: translateX(-50px);
     transition: opacity 500ms, transform 500ms;
   }

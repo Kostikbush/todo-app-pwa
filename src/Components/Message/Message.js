@@ -3,20 +3,22 @@ import {AppContext} from "../../context/context";
 import { CSSTransition } from "react-transition-group";
 import "./styles.css";
 
-const Message = ({settingVeu}) => {
+const Message = ({settingVeu, setSettingVeu}) => {
   const {theme, font} = useContext(AppContext);
 
   const [showList, setShowList] = useState(false);
   const [highlightedHobby, setHighlightedHobby] = useState(false);
-
-
   const Onswitch = () => {
     setShowList(!showList)
+    setTimeout(()=> {
+      setShowList(false)
+    },4000)
   };
 
   const listSwitch = () => {
     setHighlightedHobby(!highlightedHobby)
     };
+    console.log(showList)
     return (
       <div className={`${settingVeu ? 'app-fill' : ''} "container" ${font}`} >
         <button className={`${theme}-display ${font}`} onClick={Onswitch}>
