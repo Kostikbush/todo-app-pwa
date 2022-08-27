@@ -59,7 +59,7 @@ export const TimerTodo = ({setTimeCompleted}) => {
         let time = hour*3600 + minit*60;
         let times = hours*3600 + minits*60;
         if(time > 0) {
-            if(time-540 > times){
+            if(time-480 > times){
                 setTimeCompleted(time);
             }
             else{
@@ -76,7 +76,6 @@ export const TimerTodo = ({setTimeCompleted}) => {
                     <input
                         onChange={hourHandler}
                         className={`${theme}-form-timer bg-transparent input-timer`}
-                        defaultValue={hours}
                         value={hour}
                         max="2"
                         min="1"
@@ -86,7 +85,6 @@ export const TimerTodo = ({setTimeCompleted}) => {
                     <span className={`mr-2`}>:</span>
                     <div className={`minits time h-7`}>
                     <input
-                        defaultValue={minits}
                         value={minit}
                         className={`${theme}-form-add bord bg-transparent input-timer`}
                         onChange={minitsHandler}
@@ -97,7 +95,7 @@ export const TimerTodo = ({setTimeCompleted}) => {
                 </div>
                 <div className="range__input h-14">
                     <input onChange={rangeHours} type="range" className={`${theme}-range`} defaultValue={hours} min="1" max="24"/>
-                    <input onChange={rangeMinits} type="range" className={`${theme}-range`} min="0" max="59"/>
+                    <input onChange={rangeMinits} type="range" className={`${theme}-range`} defaultValue={minits} min="0" max="59"/>
                 </div>
         </div>
     )

@@ -21,8 +21,10 @@ export const ShowAlert = () => {
     return (
     <div className={`${theme}-wrapper-setting-color ${showSet ? 'sets' : 'set-hide'} `}>
         <h3 className='mt-2'>Подсказки</h3>
-        <button onClick={()=> setShowSet(!showSet)}><IoIosArrowDown className={`${showSet ? 'set-arrow-down' : 'set-arrow-up'}`} size={20}/></button>
-        <Btn handleClick={handleShowAlert} style={`${showSet ? `${theme} btn-aset  btn btn-set` : 'btn-hide-set hidden'}`} text={`${alert ? 'выключить подсказки': 'включить подсказки'}`}/>
+        <button
+            aria-label='show-arrow-btn'
+         onClick={()=> setShowSet(!showSet)}><IoIosArrowDown className={`${showSet ? 'set-arrow-down' : 'set-arrow-up'}`} size={20}/></button>
+        <Btn handleClick={handleShowAlert} style={`${showSet ? `${theme} btn-aset  btn btn-set` : 'hidden'}`} text={`${alert ? 'выключить подсказки': 'включить подсказки'}`}/>
     </div>
     )
 }

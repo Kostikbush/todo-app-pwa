@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useEffect, useState } from "react";
 import { timesUp } from "../../../../redux/action";
 
-export const Timer = ({setTimeIsNull,setIsCount,isCount,todo, timeItem, setTimeItem, setTimeNow}) => {
+export const Timer = ({setAlert,setTimeIsNull,setIsCount,isCount,todo, secondsCount, setSecondsCount, setTimeNow}) => {
     const [hoursIsZero, setHoursIsZero]= useState(false);
     const [minitsIsZero, setMinitssIsZero]= useState(false);
     const dispatch = useDispatch()
@@ -11,37 +11,25 @@ export const Timer = ({setTimeIsNull,setIsCount,isCount,todo, timeItem, setTimeI
         let date = new Date();
         setTimeNow(date.getHours()*3600 + date.getMinutes()*60)
             const interval = setInterval(()=> {
-                isCount ? setTimeItem(timeItem-1) : setTimeItem(timeItem-1);
+                isCount ? setSecondsCount(secondsCount-1) : setSecondsCount(secondsCount-1);
             }, 1000);
-            return () => {
-                clearInterval(interval);
-            }
-    }, [timeItem]);
-    useEffect(()=> {
-        let date = new Date();
         setTimeNow(date.getHours()*3600 + date.getMinutes()*60)
         setTimeout(()=> {
-            if(todo.complete === true){
-                    setTimeIsNull(true)
-                }
-            if(timeItem < 0){
-                setIsCount(false)
-            }
+        if(todo.complete === true){
+            setTimeIsNull(true)
+        }
+        if(secondsCount < 0){
+            setIsCount(false)
+        }
         }, 1000)
         if(todo.complete !== true){
-            if(timeItem < 0){
-                dispatch(timesUp(todo))
+            if(secondsCount < 0){
+            dispatch(timesUp(todo))
             }
-        }
-        if(todo.dateCreate !== date.getFullYear()+date.getMonth()+date.getDate()){
-            
+            if(todo.dateCreate !== date.getFullYear()+date.getMonth()+date.getDate()){
             dispatch(timesUp(todo))
         }
-    }, [timeItem])
-    const hours = Math.floor(timeItem/3600);
-    const minits = Math.floor((timeItem- hours*3600)/60);
-    const seconds = timeItem - (minits*60+hours*3600);
-    useEffect(()=> {
+        }
         if(hours === 0){
             setHoursIsZero(true)
         }else{
@@ -52,7 +40,27 @@ export const Timer = ({setTimeIsNull,setIsCount,isCount,todo, timeItem, setTimeI
         }else{
             setMinitssIsZero(false)
         }
-    }, [seconds])
+
+            return () => {
+                clearInterval(interval);
+            }
+    }, [secondsCount]);
+    const hours = Math.floor(secondsCount/3600);
+    const minits = Math.floor((secondsCount- hours*3600)/60);
+    const seconds = secondsCount - (minits*60+hours*3600);
+    useEffect(()=> {
+        if(todo.complete !== true && secondsCount !== 'undefined'){
+            if(secondsCount !== 0){
+                if(secondsCount < 300 && secondsCount !== null){
+                    setAlert(true)
+                    setTimeout(()=> {
+                        setAlert(false)
+                    },2000)
+                }
+            }
+        }
+    }, [minits])
+
     return (
         <>
         {isCount ?(

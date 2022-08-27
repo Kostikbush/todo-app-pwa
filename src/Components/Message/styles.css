@@ -45,7 +45,7 @@ body {
     border-radius: 5px;
     outline: none;
     cursor: pointer;
-    transition: background-color 350ms;
+    transition: background-color 100ms;
   }
   .origin-list-body {
     position: absolute;
@@ -108,15 +108,15 @@ body {
   
   .origin-list-item--active {
     color: rgb(166, 8, 150);
-    transition: color 1500ms;
+    transition: color 100ms;
   }
   .dark-list-item--active {
     color: white;
-    transition: color 1500ms;
+    transition: color 100ms;
   }
   .light-list-item--active {
     color: black;
-    transition: color 1500ms;
+    transition: color 100ms;
   }
   
   /* This fires as soon as the element enters the dorm */
@@ -136,7 +136,7 @@ body {
     width: 100%;
     max-height: 200px;
     background-color: transparent;
-    transition: all 400ms;
+    transition: all 100ms;
   }
   
   /* This fires as soon as the this.state.showList is false */
@@ -153,6 +153,6 @@ body {
     max-height: 40px;
     color: transparent;
     background-color: transparent;
-    transition: all 400ms;
+    transition: all 100ms;
   }
   

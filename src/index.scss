@@ -172,7 +172,7 @@ code {
 .set-enter-active {
   opacity: 1;
   transform: translateX(0);
-  transition: opacity 500ms, transform 500ms;
+  transitio: opacity 100ms, transform 100ms;
 }
 
 .set-exit {
@@ -183,7 +183,7 @@ code {
 .set-exit-active {
   opacity: 0;
   transform: scale(0.1);
-  transition: opacity 500ms, transform 500ms;
+  transition: opacity 100ms, transform 100ms;
 }
 
 .light {
@@ -762,6 +762,7 @@ button.origin:active::before {
       }
       .light-MyText {
         text-decoration: line-through black 4px;
+        -webkit-text-decoration-line: line-through;
       }
   
       .dark-MyText {
@@ -787,3 +788,6 @@ button.origin:active::before {
 }
 }
 
+.alert-w-timer {
+  width: 100px;
+}

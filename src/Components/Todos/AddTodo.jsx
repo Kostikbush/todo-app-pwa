@@ -9,8 +9,7 @@ import { addTodo, arrSots, savedTodos } from "../../redux/action";
 
 const AddTodo = () => {
     const dispatch = useDispatch();
-    const [showClock, setShowClock] = useState(false);
-    const {theme, font} = useContext(AppContext);
+    const {theme, font,handleShow, showClock, setShowClock} = useContext(AppContext);
     const [textAddForm, setTextAddForm] = useState('');
     const [timeCompleted, setTimeCompleted] = useState(null)
     const AddFormInputHandler = (event) => {
@@ -45,8 +44,11 @@ const AddTodo = () => {
         setShowClock(!showClock)
     }
     return (
-        <div className={`${font} ${theme}-form-add  flex items-center justify-center mb-4 rounded-2xl border-2 p-5 py-2 mt-20 w-full`}>
+        <div
+            
+         className={`${font} ${theme}-form-add  flex items-center justify-center mb-4 rounded-2xl border-2 p-5 py-2 mt-20 w-full`}>
             <input 
+                onClick={handleShow}
                 onKeyPress={onKeyPressHandler}
                 maxLength="40" 
                 value={textAddForm}
@@ -60,7 +62,9 @@ const AddTodo = () => {
                 onChange={AddFormInputHandler}
                 />
             <div className="text-white flex justify-between align-middle text-center">
-                <button>
+                <button
+                    aria-label='show-clock-btn'
+                    >
                     <BsClockHistory
                      className={`${theme}-icon-form mx-3 self-end`} 
                      size={20} 
@@ -69,7 +73,7 @@ const AddTodo = () => {
 
                 <CSSTransition
                     in={showClock}            
-                    timeout={600}
+                    timeout={100}
                     classNames='set'
                     unmountOnExit
                 >
@@ -80,7 +84,9 @@ const AddTodo = () => {
                      showClock={showClock}
                       />
                 </CSSTransition>
-                <button onClick={onClickHandler}>
+                <button
+                    aria-label='add-todo-btn'
+                    onClick={onClickHandler}>
                     <MdPostAdd 
                         className={`${theme}-icon-form mx-5 self-end`}
                         size={26}

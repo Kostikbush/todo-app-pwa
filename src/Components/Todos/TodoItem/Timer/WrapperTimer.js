@@ -2,18 +2,21 @@ import { useState, useEffect, useContext } from "react";
 import { TimeCreate } from "./TimeCreate";
 import { Timer } from "./Timer";
 import { AppContext } from "../../../../context/context";
+import { Alert } from "../../../Alert/Alert";
+import { CSSTransition } from "react-transition-group";
 
 
 export const WrapperTimer = ({todo}) => {
     const date = new Date();
     const [isCount, setIsCount] = useState(true);
     const [timeIsNull,setTimeIsNull] = useState(false);
-    const [timeItem, setTimeItem] = useState(null);
-    const [timeNow, setTimeNow] = useState(date.getHours()*3600 + date.getMinutes()*60);
+    const [secondsCount, setSecondsCount] = useState(null);
+    const [alert, setAlert] = useState(false)
+    const [timeNow, setTimeNow] = useState(date.getHours()*3600 + date.getMinutes()*60 || 0);
     const {theme} = useContext(AppContext);
 
 
-    let percent= (timeItem*100)/(todo.timeCompleted - todo.timeCreate);
+    let percent= (secondsCount*100)/(todo.timeCompleted - todo.timeCreate);
     let ringColor = `#ec4899`;
     let shadow = '1px 12px 35px rgba(209, 0, 160, 0.762)'
     if(theme === 'origin'){
@@ -55,19 +58,27 @@ export const WrapperTimer = ({todo}) => {
                 setTimeIsNull(false)
             }
             if(todo.timeCompleted !== null) {
-                setTimeItem(todo.timeCompleted - timeNow)
+                setSecondsCount(todo.timeCompleted - timeNow)
             }
-    }, [], timeNow)
+    },[])
     return (
         <div className="relative ml-11">
             {timeIsNull ?
             <TimeCreate todo={todo}/>
              :
              <div>
-                <Timer setTimeIsNull={setTimeIsNull} isCount={isCount} setIsCount={setIsCount} setTimeNow={setTimeNow} todo={todo} setTimeItem={setTimeItem} timeItem={timeItem}/>
+                <Timer setAlert={setAlert} setTimeIsNull={setTimeIsNull} isCount={isCount} setIsCount={setIsCount} setTimeNow={setTimeNow} todo={todo} setSecondsCount={setSecondsCount} secondsCount={secondsCount}/>
             </div>
              }
              <div className={`${(todo.complete || todo.timeCompleted == null) ? 'hidden' : ''}`} style={style}><div className={`${todo.complete ? 'hidden' : ''}`} style={styleChild}></div></div>
+             <CSSTransition
+                in={alert}            
+                timeout={500}
+                classNames='set'
+                unmountOnExit
+             >
+             <Alert style='alert-w-timer' text='ДО сгорания задачи осталось меньше 5 минут!'/>
+             </CSSTransition>
         </div>
     )
 }

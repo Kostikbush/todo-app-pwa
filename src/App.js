@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import {AppContext} from "./context/context";
 import Loader from './Components/Todos/Loader/Loading';
 import Message from "./Components/Message/Message";
@@ -12,6 +12,7 @@ import { getSettings, getTodos } from "./redux/action";
 import { useSetting } from "./customHooks/useSetting/useSetting";
 import { handleThemeBody } from "./style-for-handle-theme/style-theme";
 const App = () => {
+  const [showClock, setShowClock] = useState(false);
   const dispatch = useDispatch(); 
   const theme = useSelector(state => {
     const {settingReducer} = state;
@@ -35,10 +36,15 @@ const loading = useSelector(state => {
       dispatch(getTodos());
       dispatch(getSettings());
   }, [])
+  const handleShow = () => {
+    setSettingVeu(false)
+    setShowClock(false)
+  }
   return (
-    <React.Fragment>
-      <AppContext.Provider value={{theme, font, loading}}>
-        <div className={`${font} flex justify-between`}>
+      <AppContext.Provider value={{handleShow,theme, font, loading, showClock}}>
+        <div 
+        onClick={()=> setShowClock(false)} 
+        className={`${font} flex justify-between`}>
           <Message setSettingVeu={setSettingVeu} settingVeu={settingVeu}/> 
           <CSSTransition
             in={settingVeu}
@@ -60,13 +66,12 @@ const loading = useSelector(state => {
               >
               <Setting/>
         </CSSTransition>
-        <div className={`App ${settingVeu ? 'app-fill' : ''} text-rose-50`}>
+        <div
+          className={`App ${settingVeu ? 'app-fill' : ''} text-rose-50`}>
           <Loader/>
           <WrapperTodos/>
         </div>
-        
       </AppContext.Provider>
-    </React.Fragment>
   );
 }
 

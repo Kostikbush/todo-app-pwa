@@ -12,7 +12,7 @@ const Message = ({settingVeu, setSettingVeu}) => {
     setShowList(!showList)
     setTimeout(()=> {
       setShowList(false)
-    },4000)
+    },6000)
   };
 
   const listSwitch = () => {
@@ -25,7 +25,7 @@ const Message = ({settingVeu, setSettingVeu}) => {
         </button>
         <CSSTransition
           in={showList}
-          timeout={400}
+          timeout={100}
           classNames="list-transition"
           unmountOnExit
           appear

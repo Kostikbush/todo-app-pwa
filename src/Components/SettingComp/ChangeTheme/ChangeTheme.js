@@ -21,10 +21,12 @@ export const ChangeTheme = () => {
     return (
         <div className={`${theme}-wrapper-theme ${showTheme ? 'theme-wrapper-show' : 'theme-wrapper-hide'} w-full flex flex-col align-middle justify-center pb-5`}>
             <h3 className="mt-8">ТЕМА</h3>
-            <div className="seting-arrow"><button onClick={handleSettingTheme}><IoIosArrowDown className={`${showTheme ? 'move-arrow-up' : 'move-arrow-down'}`} size={20}/></button></div>
+            <div className="seting-arrow"><button
+                aria-label='show-arrow-btn'
+                onClick={handleSettingTheme}><IoIosArrowDown className={`${showTheme ? 'move-arrow-up' : 'move-arrow-down'}`} size={20}/></button></div>
             <CSSTransition
                 in={showTheme}
-                timeout={500}
+                timeout={100}
                 classNames='setting-animation'
                 unmountOnExit
             >

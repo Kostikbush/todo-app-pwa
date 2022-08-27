@@ -19,7 +19,9 @@ export const ChangeFont = () => {
     return (
         <div className={`${theme}-font-wrapper-color ${showFont ? 'change-font-wrapper' : 'hide-wrapper-font'} `}>
             <h3 className='h3-font'>ШРИФТ</h3>
-            <div className="seting-arrow"><button onClick={handleSettingFont}><IoIosArrowDown className={`${showFont ? 'move-arrow-up' : 'move-arrow-down'}`} size={20}/></button></div>
+            <div className="seting-arrow"><button
+                aria-label='show-arrow-btn'
+             onClick={handleSettingFont}><IoIosArrowDown className={`${showFont ? 'move-arrow-up' : 'move-arrow-down'}`} size={20}/></button></div>
             <CSSTransition
                 in={showFont}
                 timeout={500}

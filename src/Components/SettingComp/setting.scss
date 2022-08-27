@@ -1,5 +1,5 @@
 @mixin setting-item-wrapper-hide() {
-    transition: all 0.3s;
+    transition: all 0.1s;
     margin-top: 50px;
     border-radius: 10px;
     text-align: center;
@@ -33,18 +33,18 @@
 .setting-animation-enter {
     opacity: 0;
     transform: translateX(-50px);
-    transition: .5s all;
+    transition: .1s all;
   }
   
   
 .setting-animation-enter-active {
     opacity: 1;
     transform: translateX(0);
-    transition: opacity 500ms, transform 500ms;
+    transition: opacity 100ms, transform 100ms;
   }
   
   .setting-animation-exit {
-    transition: .5s all;
+    transition: .1s all;
     opacity: 1;
   }
   
@@ -52,5 +52,5 @@
   .setting-animation-exit-active {
     opacity: 0;
     transition: translateX(-50px);
-    transition: opacity 500ms, transform 500ms;
+    transition: opacity 100ms, transform 100ms;
   }
