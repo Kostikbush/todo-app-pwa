@@ -9,7 +9,7 @@ import { addTodo, arrSots, savedTodos } from "../../redux/action";
 
 const AddTodo = () => {
     const dispatch = useDispatch();
-    const {theme, font,handleShow, showClock, setShowClock} = useContext(AppContext);
+    const {theme, font, showClock, setShowClock, setSettingVeu} = useContext(AppContext);
     const [textAddForm, setTextAddForm] = useState('');
     const [timeCompleted, setTimeCompleted] = useState(null)
     const AddFormInputHandler = (event) => {
@@ -48,7 +48,7 @@ const AddTodo = () => {
             
          className={`${font} ${theme}-form-add  flex items-center justify-center mb-4 rounded-2xl border-2 p-5 py-2 mt-20 w-full`}>
             <input 
-                onClick={handleShow}
+                onClick={()=> setSettingVeu(false)}
                 onKeyPress={onKeyPressHandler}
                 maxLength="40" 
                 value={textAddForm}

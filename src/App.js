@@ -41,7 +41,7 @@ const loading = useSelector(state => {
     setShowClock(false)
   }
   return (
-      <AppContext.Provider value={{handleShow,theme, font, loading, showClock}}>
+      <AppContext.Provider value={{handleShow,theme, font, loading, showClock,setShowClock, setSettingVeu}}>
         <div 
         onClick={()=> setShowClock(false)} 
         className={`${font} flex justify-between`}>

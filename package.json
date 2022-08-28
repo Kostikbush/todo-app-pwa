@@ -23,9 +23,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "ga": "git add .",
-    "gc": "git commit -m 'add new fiches'",
-    "gp":"git push 'https://github.com/Kostikbush/todo-app-pwa.git'",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
