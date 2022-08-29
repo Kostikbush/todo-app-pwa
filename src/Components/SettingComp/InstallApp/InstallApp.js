@@ -3,6 +3,7 @@ import { AppContext } from "../../../context/context";
 import '../SetTodos/setTodos.scss';
 import {IoIosArrowDown} from 'react-icons/io'
 import { Btn } from "../../Btn/Btn";
+import { BtnArrow } from "../../BtnArrow/BtnArrow";
 
 export const InstallApp = () => {
     const {theme} = useContext(AppContext);
@@ -24,9 +25,10 @@ export const InstallApp = () => {
     return (
         <div className={`${theme}-wrapper-setting-color ${showSet ? 'sets' : 'set-hide'} `}>
             <h3 className={`${showSet ? 'mt-0' : 'mt-2'}`}>Установить приложение</h3>
-            <button
-                aria-label='show-arrow-btn'
-                 onClick={()=> setShowSet(!showSet)}><IoIosArrowDown className={`${showSet ? 'set-arrow-down' : 'set-arrow-up'}`} size={20}/></button>
+            <BtnArrow
+                show={showSet}
+                setShow={setShowSet}
+            />
             <Btn handleClick={handleInstallApp} style={`${showSet ? `${theme} btn-aset  btn btn-set` : 'btn-hide-set hidden'}`} text='Установить как приложение'/>
         </div>
     )

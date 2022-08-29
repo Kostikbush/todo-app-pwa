@@ -52,7 +52,7 @@ const loading = useSelector(state => {
             classNames='icon__setting'
             >
             <AiFillSetting
-              size={30}
+              size={40}
               className={`${theme}-icon-setting`}
               onClick={handleSettings}
             />

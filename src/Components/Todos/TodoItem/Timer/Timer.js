@@ -1,7 +1,7 @@
 import { TimesUp } from "./TimesUp"
 import { useDispatch } from 'react-redux';
 import { useEffect, useState } from "react";
-import { timesUp } from "../../../../redux/action";
+import { savedTodos, timesUp } from "../../../../redux/action";
 
 export const Timer = ({setAlert,setTimeIsNull,setIsCount,isCount,todo, secondsCount, setSecondsCount, setTimeNow}) => {
     const [hoursIsZero, setHoursIsZero]= useState(false);
@@ -25,9 +25,11 @@ export const Timer = ({setAlert,setTimeIsNull,setIsCount,isCount,todo, secondsCo
         if(todo.complete !== true){
             if(secondsCount < 0){
             dispatch(timesUp(todo))
+            dispatch(savedTodos())
             }
             if(todo.dateCreate !== date.getFullYear()+date.getMonth()+date.getDate()){
             dispatch(timesUp(todo))
+            dispatch(savedTodos())
         }
         }
         if(hours === 0){

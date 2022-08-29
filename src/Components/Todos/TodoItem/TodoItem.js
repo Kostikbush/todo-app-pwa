@@ -38,12 +38,15 @@ export const TodoItem = (
                     <span className={`mr-4 ${font === 'artist' ? 'text-3xl' : ''}`}>
                             <WrapperTimer todo={todo}/>
                     </span>
-                    {todo.complete ? '' : <button onClick={handleWright} className="mr-4">
+                    {todo.complete ? '' : <button
+                        aria-label='pencil-btn'
+                        onClick={handleWright} className="mr-4">
                         <BsFillPencilFill size={20}  
                         className={`${theme}-icon-form`}/>
                     </button>}
                     <button className="self-center" onClick={handleRemove}>
                         <BsTrash
+                            aria-label='trash-btn'
                             size={24} 
                             className={`${theme}-icon-form`}
                             />

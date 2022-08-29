@@ -5,6 +5,7 @@ import {IoIosArrowDown} from 'react-icons/io'
 import { Btn } from "../../Btn/Btn";
 import { CSSTransition } from "react-transition-group";
 import { Alert } from "../../Alert/Alert";
+import { BtnArrow } from "../../BtnArrow/BtnArrow";
 
 
 export const SetTodos = () => {
@@ -30,9 +31,9 @@ export const SetTodos = () => {
     return (
         <div className={`relative ${theme}-wrapper-setting-color ${showSet ? 'sets' : 'set-hide'} `}>
             <h3 className={`${showSet ? 'mt-4' : 'mt-2'}`}>Запись</h3>
-            <button
-                aria-label='show-arrow-btn'
-                onClick={()=> setShowSet(!showSet)}><IoIosArrowDown className={`${showSet ? 'set-arrow-down' : 'set-arrow-up'}`} size={20}/></button>
+            <BtnArrow
+                setShow={setShowSet}
+                show={showSet}/>
             <Btn handleClick={handleSetText} style={`${showSet ? `${theme} btn-aset  btn btn-set` : 'hidden'}`} text='записать задачи в txt фаил?'/>
             <CSSTransition   
                 in={alertVue}            

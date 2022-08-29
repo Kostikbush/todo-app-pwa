@@ -5,8 +5,8 @@ import {AppContext} from "../../context/context";
 import WrapperTodoItem from "./TodoItem/WrapperTodoItem";
 import { useDispatch, useSelector } from 'react-redux';
 import { arrSots, getTodos, removeAllTodoCompleted, removeAllTodoDay, removeAllTodoTimesUp, savedTodos } from "../../redux/action";
-import { IoIosArrowDown } from "react-icons/io";
 import { Btn } from "../Btn/Btn";
+import { BtnArrow } from "../BtnArrow/BtnArrow";
 
 const TodoList = () => {
     const [showTodosToDay, setShowTodosToDay] = useState(true);
@@ -41,6 +41,7 @@ const TodoList = () => {
         },500)
     }
     useEffect(()=> {
+        console.log('get')
         dispatch(getTodos())
         dispatch(arrSots())
     },[])
@@ -51,10 +52,11 @@ const TodoList = () => {
          className={`${font} size-h2`}>
             <div className={`transition-all mb-5 p-1 ${theme}-wrapper-list-todos ${showTodosToDay ? 'h-auto-wrapper' : 'h-wrapper'}`}>
                 <h2>Дела на сегодня</h2>
-                <button
-                    aria-label='show-arrow-btn'
-                 className={`${showTodosToDay ? 'rotate-180 transition-all' : 'transition-all'}`} onClick={()=>setShowTodosToDay(!showTodosToDay)}><IoIosArrowDown size={20}/></button>
-                <TransitionGroup component='ul' className={`${font} ${showTodosToDay ? 'translate-x-0 transition-all' : 'transfo'}`}>
+                <BtnArrow
+                show={showTodosToDay}
+                setShow={setShowTodosToDay}
+                />                
+                 <TransitionGroup component='ul' className={`${font} ${showTodosToDay ? 'translate-x-0 transition-all' : 'transfo'}`}>
                         {todosToday.map((todo, index) => {
                             return (
                                 <CSSTransition
@@ -71,9 +73,10 @@ const TodoList = () => {
             </div>
             <div className={`mb-5 p-1 ${theme}-wrapper-list-todos ${showTodosComplete ? 'h-auto-wrapper' : 'h-wrapper'}`}>
                 <h2>Выполненные дела</h2>
-                <button
-                    aria-label='show-arrow-btn'
-                    className={`${showTodosComplete ? 'rotate-180 transition-all' : 'transition-all'}`} onClick={()=>setShowTodosComplete(!showTodosComplete)}><IoIosArrowDown size={20}/></button>
+                <BtnArrow
+                show={showTodosComplete}
+                setShow={setShowTodosComplete}
+                />
                 <TransitionGroup component='ul' className={`${font} ${showTodosComplete ? 'translate-x-0 transition-all' : 'transfo'}`}>
                         {todosCompleted.map((todo, index) => {
                             return (
@@ -90,9 +93,10 @@ const TodoList = () => {
             </div>
             <div className={`p-1 ${theme}-wrapper-list-todos ${showTodosTimeUp ? 'h-auto-wrapper' : 'h-wrapper'}`}>
                 <h2>Сгоревшие задачи</h2>
-                <button
-                    aria-label='show-arrow-btn'
-                    className={`${showTodosTimeUp ? 'rotate-180 transition-all' : 'transition-all'}`} onClick={()=>setShowTodosTimeUp(!showTodosTimeUp)}><IoIosArrowDown size={20}/></button>
+                <BtnArrow
+                show={showTodosTimeUp}
+                setShow={setShowTodosTimeUp}
+                />
                 <TransitionGroup component='ul' className={`${font} ${showTodosTimeUp ? 'translate-x-0 transition-all' : 'transfo'}`}>
                         {todosTimeUp.map((todo, index) => {
                             return (

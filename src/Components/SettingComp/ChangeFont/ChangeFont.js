@@ -7,6 +7,7 @@ import { useSetting } from "../../../customHooks/useSetting/useSetting";
 import { useDispatch } from 'react-redux';
 import { changeFont, savedSettings } from '../../../redux/action';
 import { CSSTransition } from 'react-transition-group';
+import { BtnArrow } from '../../BtnArrow/BtnArrow';
 
 export const ChangeFont = () => {
     const dispatch = useDispatch()
@@ -19,9 +20,11 @@ export const ChangeFont = () => {
     return (
         <div className={`${theme}-font-wrapper-color ${showFont ? 'change-font-wrapper' : 'hide-wrapper-font'} `}>
             <h3 className='h3-font'>ШРИФТ</h3>
-            <div className="seting-arrow"><button
-                aria-label='show-arrow-btn'
-             onClick={handleSettingFont}><IoIosArrowDown className={`${showFont ? 'move-arrow-up' : 'move-arrow-down'}`} size={20}/></button></div>
+            <div className="seting-arrow">
+            <BtnArrow
+                show={showFont}
+                setShow={handleSettingFont}/>
+            </div>
             <CSSTransition
                 in={showFont}
                 timeout={500}
