@@ -1,7 +1,6 @@
 import { useContext, useState } from "react";
 import { AppContext } from "../../../context/context";
 import './setTodos.scss';
-import {IoIosArrowDown} from 'react-icons/io'
 import { Btn } from "../../Btn/Btn";
 import { CSSTransition } from "react-transition-group";
 import { Alert } from "../../Alert/Alert";

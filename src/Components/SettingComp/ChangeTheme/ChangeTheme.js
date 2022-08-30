@@ -1,6 +1,5 @@
 import {AppContext} from "../../../context/context";
 import React, { useContext } from "react";
-import { IoIosArrowDown} from "react-icons/io";
 import './chengeTheme.scss'
 import { useSetting } from "../../../customHooks/useSetting/useSetting";
 import { Btn } from "../../Btn/Btn";

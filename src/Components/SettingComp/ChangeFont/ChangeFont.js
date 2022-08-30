@@ -2,7 +2,6 @@ import './changeFont.scss';
 import '../setting.scss'
 import {AppContext} from "../../../context/context";
 import {useContext} from 'react'
-import { IoIosArrowDown} from "react-icons/io";
 import { useSetting } from "../../../customHooks/useSetting/useSetting";
 import { useDispatch } from 'react-redux';
 import { changeFont, savedSettings } from '../../../redux/action';

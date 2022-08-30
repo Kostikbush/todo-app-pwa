@@ -1,4 +1,3 @@
-
 export const handleThemeBody = (theme) => {
   const body = document.getElementsByTagName('body');
   if(theme === 'dark'){
@@ -18,7 +17,7 @@ export const handleThemeBody = (theme) => {
     body[0].classList.remove('body-dark')
     body[0].classList.remove('body-origin')
     body[0].classList.add('body-origin')
-  }
+    }
   }
 
 

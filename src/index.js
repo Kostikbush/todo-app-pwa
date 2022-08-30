@@ -10,8 +10,6 @@ import Layout from './Components/Layout';
 import { Provider } from 'react-redux';
 const middlewareEnhancer = applyMiddleware(thunk)
 const store = createStore(rootReducer, compose(middlewareEnhancer));
-
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Provider store={store}>

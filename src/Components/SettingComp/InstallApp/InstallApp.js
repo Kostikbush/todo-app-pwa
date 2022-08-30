@@ -1,7 +1,6 @@
 import { useContext, useState } from "react";
 import { AppContext } from "../../../context/context";
 import '../SetTodos/setTodos.scss';
-import {IoIosArrowDown} from 'react-icons/io'
 import { Btn } from "../../Btn/Btn";
 import { BtnArrow } from "../../BtnArrow/BtnArrow";
 
