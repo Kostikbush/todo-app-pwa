@@ -43,7 +43,7 @@ const TodoList = () => {
     useEffect(()=> {
         dispatch(getTodos())
         dispatch(arrSots())
-    },[])
+    },[dispatch])
     return(
         <div
         onClick={handleShow}
