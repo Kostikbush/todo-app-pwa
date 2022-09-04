@@ -12,6 +12,14 @@
  4) TodoItemChange - receive todo, handleWright, 
     handleKeyPressWrite, handleWriteChange.
 # WHAT APP CAN DO:
+   1) Add todo
+   2) Add timer
+   3) delete todo
+   4) sort whith quick sort list of todo whith timer
+   5) complete todo
+   6) times up todo
+   7) change todo
+   8) setting theme and mush font, alert vue or not, remove all todos lists, 
    
 # watch on project you can follow the link - todo-app-pwa-henna.vercel.app
 
