@@ -4,42 +4,42 @@ import { CSSTransition } from "react-transition-group";
 import "./styles.css";
 
 const Message = ({settingVeu, setSettingVeu}) => {
-  const {theme, font} = useContext(AppContext);
+	const {theme, font} = useContext(AppContext);
 
-  const [showList, setShowList] = useState(false);
-  const [highlightedHobby, setHighlightedHobby] = useState(false);
-  const Onswitch = () => {
-    setShowList(!showList)
-    setTimeout(()=> {
-      setShowList(false)
-    },6000)
-  };
+	const [showList, setShowList] = useState(false);
+	const [highlightedHobby, setHighlightedHobby] = useState(false);
+	const Onswitch = () => {
+		setShowList(!showList);
+		setTimeout(()=> {
+			setShowList(false);
+		},6000);
+	};
 
-  const listSwitch = () => {
-    setHighlightedHobby(!highlightedHobby)
-    };
-    return (
-      <div className={`${settingVeu ? 'app-fill' : ''} "container" ${font}`} >
-        <button className={`${theme}-display ${font}`} onClick={Onswitch}>
+	const listSwitch = () => {
+		setHighlightedHobby(!highlightedHobby);
+	};
+	return (
+		<div className={`${settingVeu ? "app-fill" : ""} "container" ${font}`} >
+			<button className={`${theme}-display ${font}`} onClick={Onswitch}>
           Привет!
-        </button>
-        <CSSTransition
-          in={showList}
-          timeout={100}
-          classNames="list-transition"
-          unmountOnExit
-          appear
-          onEntered={listSwitch}
-          onExit={listSwitch}
-        >
-          <div className={`${theme}-list-body ${theme}-bg-list-body`}>
-            <ul className="list">
-              <li
-                className="list-item"
-              >
+			</button>
+			<CSSTransition
+				in={showList}
+				timeout={100}
+				classNames="list-transition"
+				unmountOnExit
+				appear
+				onEntered={listSwitch}
+				onExit={listSwitch}
+			>
+				<div className={`${theme}-list-body ${theme}-bg-list-body`}>
+					<ul className="list">
+						<li
+							className="list-item"
+						>
                 Приятного использования!
-              </li>
-              <li className="list-item">
+						</li>
+						<li className="list-item">
                 Ограничения по символам равно 40, почему?
 
 
@@ -49,13 +49,13 @@ const Message = ({settingVeu, setSettingVeu}) => {
                 Лучше создать много коротких дел, чем 1 длинное!
                 
                 Рекомендую писать большими буквами :)
-              </li>
-            </ul>
-          </div>
-        </CSSTransition>
-      </div>
-    );
-  }
+						</li>
+					</ul>
+				</div>
+			</CSSTransition>
+		</div>
+	);
+};
 
 
 

@@ -58,26 +58,25 @@ const WrapperTodoItem = ({todo, index}) => {
              : 
              <CSSTransition
                 timeout={400}
-                classNames="write-transi"
-             >
-                <TodoItem 
-                    index={index} 
-                    todo={todo}
-                    handleWright={handleWright}
-                     />
-            </CSSTransition>
-            }
-            </li>
+					classNames="write-transi"
+				>
+					<TodoItem 
+						index={index} 
+						todo={todo}
+						handleWright={handleWright}
+					/>
+				</CSSTransition>
+			}
+		</li>
         
-    )
-} 
-if(TodoItem !== 'undefined') {
-    TodoItem.propTypes ={
-        index: PropTypes.number,
-    }
-}else {
-    console.log('no lenght')
-}
+	);
+};
+
+TodoItem.propTypes ={
+	index: PropTypes.number,
+	todo: PropTypes.object,
+};
+
 
 
 export default WrapperTodoItem;

@@ -791,3 +791,14 @@ button.origin:active::before {
 .alert-w-timer {
   width: 100px;
 }
+
+.origin-box-shad {
+  @include orgin-wrapper-shadow;
+}
+.light-box-shad{
+  @include light-wrapper-shadow;
+}
+
+.dark-box-shad {
+  @include darck-wrapper-shadow
+}

@@ -1,7 +1,22 @@
-export const ArrSort = (a,b) => {
-        if(a.timeCompleted>b.timeCompleted)return 1;
-        if(a.timeCompleted===b.timeCompleted)return 0;
-        if(a.timeCompleted<b.timeCompleted)return -1;
-        if(a.timeCompleted === null && b.timeCompleted !== null)return -1;
-        
+export function quickSort(List) {
+	if (List.length < 2) {
+		return List;
+	}else{
+
+		const index = Math.floor(List.length / 2);
+		const pivot = List[index];
+		const leftList = [];
+		const rightList = [];
+		for (let i = 0; i < List.length; i++) {
+			if(i === index){
+				continue;
+			}
+			if (List[i].timeCompleted > pivot.timeCompleted) {
+				rightList.push(List[i]);
+			}else {
+				leftList.push(List[i]);
+			} 
+		}
+		return List = [...quickSort(leftList), pivot, ...quickSort(rightList)];
+	}
 }

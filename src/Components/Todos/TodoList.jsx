@@ -41,16 +41,14 @@ const TodoList = () => {
         },500)
     }
     useEffect(()=> {
-        console.log('get')
         dispatch(getTodos())
         dispatch(arrSots())
     },[])
-
     return(
         <div
         onClick={handleShow}
          className={`${font} size-h2`}>
-            <div className={`transition-all mb-5 p-1 ${theme}-wrapper-list-todos ${showTodosToDay ? 'h-auto-wrapper' : 'h-wrapper'}`}>
+            <div className={`${theme}-box-shad transition-all mb-12 p-1 ${theme}-wrapper-list-todos ${showTodosToDay ? 'h-auto-wrapper' : 'h-wrapper'}`}>
                 <h2>Дела на сегодня</h2>
                 <BtnArrow
                 show={showTodosToDay}
@@ -71,7 +69,7 @@ const TodoList = () => {
                 </TransitionGroup> 
                 {todosToday.length ? <Btn text='Удалить все задачи на сегодня' style={showTodosToDay ?`${theme} btn btn-set` : 'hidden'} handleClick={handleRemoveAllTodo}/> : <div className={showTodosToDay ? '' : 'hidden'}>У вас нет задач</div>}
             </div>
-            <div className={`mb-5 p-1 ${theme}-wrapper-list-todos ${showTodosComplete ? 'h-auto-wrapper' : 'h-wrapper'}`}>
+            <div className={`${theme}-box-shad mb-12 p-1 ${theme}-wrapper-list-todos ${showTodosComplete ? 'h-auto-wrapper' : 'h-wrapper'}`}>
                 <h2>Выполненные дела</h2>
                 <BtnArrow
                 show={showTodosComplete}
@@ -91,7 +89,7 @@ const TodoList = () => {
                 </TransitionGroup> 
                 {todosCompleted.length ? <Btn text='Удалить все выполненные задачи' style={showTodosComplete ? `${theme} btn btn-set` : 'hidden'} handleClick={handleRemoveAllTodo}/> : <div className={showTodosComplete ? '' : 'hidden'}>У вас нет выполненных задач</div>}
             </div>
-            <div className={`p-1 ${theme}-wrapper-list-todos ${showTodosTimeUp ? 'h-auto-wrapper' : 'h-wrapper'}`}>
+            <div className={`${theme}-box-shad p-1 ${theme}-wrapper-list-todos ${showTodosTimeUp ? 'h-auto-wrapper' : 'h-wrapper'}`}>
                 <h2>Сгоревшие задачи</h2>
                 <BtnArrow
                 show={showTodosTimeUp}
