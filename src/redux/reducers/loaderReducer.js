@@ -7,6 +7,7 @@ const initialState = {
 export const loaderReducer = (state=initialState, action) => {
 	switch(action.type) {
 	case LOADER_ON:
+		
 		return{
 			...state,
 			loader: true,

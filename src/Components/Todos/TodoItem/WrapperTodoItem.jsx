@@ -69,7 +69,7 @@ const WrapperTodoItem = ({todo, index}) => {
 			}
 		</li>
         
-	);
+	)
 };
 
 TodoItem.propTypes ={
