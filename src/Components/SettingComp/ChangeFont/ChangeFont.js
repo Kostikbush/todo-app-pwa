@@ -1,12 +1,13 @@
-import "./changeFont.scss";
-import "../setting.scss";
 import {AppContext} from "../../../context/context";
 import {useContext} from "react";
-import { useSetting } from "../../../customHooks/useSetting/useSetting";
 import { useDispatch } from "react-redux";
-import { changeFont, savedSettings } from "../../../redux/action";
 import { CSSTransition } from "react-transition-group";
+
+import { useSetting } from "../../../customHooks/useSetting/useSetting";
+import { changeFont, savedSettings } from "../../../redux/action";
 import { BtnArrow } from "../../BtnArrow/BtnArrow";
+import "./changeFont.scss";
+import "../setting.scss";
 
 export const ChangeFont = () => {
 	const dispatch = useDispatch();

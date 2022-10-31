@@ -1,6 +1,7 @@
-import { TimesUp } from "./TimesUp";
 import { useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
+
+import { TimesUp } from "./TimesUp";
 import { savedTodos, timesUp } from "../../../../redux/action";
 
 export const Timer = ({setAlert,setTimeIsNull,setIsCount,isCount,todo, secondsCount, setSecondsCount, setTimeNow}) => {

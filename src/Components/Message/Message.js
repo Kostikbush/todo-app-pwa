@@ -1,6 +1,7 @@
 import React, {useContext, useState } from "react";
-import {AppContext} from "../../context/context";
 import { CSSTransition } from "react-transition-group";
+
+import {AppContext} from "../../context/context";
 import "./styles.css";
 
 const Message = ({settingVeu, setSettingVeu}) => {

@@ -1,9 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
-import PropTypes from 'prop-types'
+import { useDispatch, useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+
 import {AppContext} from "../../context/context";
 import WrapperTodoItem from "./TodoItem/WrapperTodoItem";
-import { useDispatch, useSelector } from 'react-redux';
 import { arrSots, getTodos, removeAllTodoCompleted, removeAllTodoDay, removeAllTodoTimesUp, savedTodos } from "../../redux/action";
 import { Btn } from "../Btn/Btn";
 import { BtnArrow } from "../BtnArrow/BtnArrow";

@@ -1,10 +1,11 @@
 import { useContext, useState } from "react";
-import { AppContext } from "../../../context/context";
-import "../SetTodos/setTodos.scss";
-import { Btn } from "../../Btn/Btn";
 import { useDispatch } from "react-redux";
+
+import { AppContext } from "../../../context/context";
+import { Btn } from "../../Btn/Btn";
 import { deleteAllTodos, savedTodos } from "../../../redux/action";
 import { BtnArrow } from "../../BtnArrow/BtnArrow";
+import "../SetTodos/setTodos.scss";
 export const DeleteAllTodos = () => {
 	const dispatch = useDispatch();
 	const {theme} = useContext(AppContext);

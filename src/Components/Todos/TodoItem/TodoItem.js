@@ -1,11 +1,12 @@
-import Check from "./Check";
+import { useDispatch } from "react-redux";
 import { BsTrash } from "react-icons/bs";
 import {BsFillPencilFill} from "react-icons/bs";
 import { useContext } from "react";
+
 import { AppContext } from "../../../context/context";
 import { WrapperTimer } from "./Timer/WrapperTimer";
-import { useDispatch } from "react-redux";
 import { removeTodo, savedTodos } from "../../../redux/action";
+import Check from "./Check";
 
 export const TodoItem = (
 	{

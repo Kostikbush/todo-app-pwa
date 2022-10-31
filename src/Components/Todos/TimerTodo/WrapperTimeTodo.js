@@ -1,12 +1,12 @@
-import { TimerTodo } from "./TimerTodo";
+import { CSSTransition } from "react-transition-group";
 import { useContext, useState } from "react";
+
+import { TimerTodo } from "./TimerTodo";
 import { AppContext } from "../../../context/context";
+import { Alert } from "../../Alert/Alert";
+import { Btn } from "../../Btn/Btn";
 import "../../../index.scss";
 import "./timerTodo.scss";
-import { Alert } from "../../Alert/Alert";
-import { CSSTransition } from "react-transition-group";
-import { Btn } from "../../Btn/Btn";
-
 
 export const WrapperTimeTodo = ({setShowClock,showClock,timeCompleted,setTimeCompleted}) => {
 	const [alertVue, setAlertVue] = useState(true);

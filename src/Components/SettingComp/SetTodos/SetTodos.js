@@ -1,10 +1,11 @@
 import { useContext, useState } from "react";
-import { AppContext } from "../../../context/context";
-import "./setTodos.scss";
-import { Btn } from "../../Btn/Btn";
 import { CSSTransition } from "react-transition-group";
+
+import { AppContext } from "../../../context/context";
+import { Btn } from "../../Btn/Btn";
 import { Alert } from "../../Alert/Alert";
 import { BtnArrow } from "../../BtnArrow/BtnArrow";
+import "./setTodos.scss";
 
 
 export const SetTodos = () => {

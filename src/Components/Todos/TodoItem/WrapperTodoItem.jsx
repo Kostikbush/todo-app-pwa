@@ -1,10 +1,10 @@
 import  PropTypes  from 'prop-types';
-import { CSSTransition } from "react-transition-group";
-import { TodoItemChange } from "./TodoItemChange";
-import {TodoItem} from './TodoItem'
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { CSSTransition } from "react-transition-group";
 
+import { TodoItemChange } from "./TodoItemChange";
+import {TodoItem} from './TodoItem';
 import { savedTodos, wrightChange } from '../../../redux/action';
 
 

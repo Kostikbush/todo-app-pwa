@@ -1,6 +1,7 @@
-import "./range.css";
 import { useContext, useEffect, useState } from "react";
+
 import { AppContext } from "../../../context/context";
+import "./range.css";
 
 
 
@@ -59,11 +60,11 @@ export const TimerTodo = ({setTimeCompleted}) => {
 		let time = hour*3600 + minit*60;
 		let times = hours*3600 + minits*60;
 		if(time > 0) {
-			if(time-480 > times){
+			if(time-600 > times){
 				setTimeCompleted(time);
 			}
 			else{
-				setTimeCompleted(null);
+				setTimeCompleted(times+600);
 			}
 		}else{
 			setTimeCompleted(null);

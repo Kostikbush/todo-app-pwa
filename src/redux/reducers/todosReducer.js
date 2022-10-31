@@ -9,12 +9,13 @@ const initialState = {
 export const todosReducer = (state=initialState, action) => {
 	switch(action.type) {
 	case ADD_TODO: 
+		console.log(action.data.timeCompleted)
 		const date = new Date();
 		const timeCreate = date.getHours()*3600 + date.getMinutes()*60; 
 		const dateCreate = date.getFullYear()+date.getMonth()+date.getDate();
 		const todo = {
 			title: action.data.title,
-			id: Date.now(),
+			id: date.getSeconds()+Math.random(),
 			complete: false,
 			timeCreate: timeCreate,
 			dateCreate: dateCreate,

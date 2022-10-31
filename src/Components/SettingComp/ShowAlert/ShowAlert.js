@@ -1,10 +1,11 @@
 import { useContext, useState } from "react";
-import { AppContext } from "../../../context/context";
-import "../SetTodos/setTodos.scss";
-import { Btn } from "../../Btn/Btn";
 import { useDispatch, useSelector } from "react-redux";
+
+import { AppContext } from "../../../context/context";
+import { Btn } from "../../Btn/Btn";
 import { savedSettings, showAlert } from "../../../redux/action";
 import { BtnArrow } from "../../BtnArrow/BtnArrow";
+import "../SetTodos/setTodos.scss";
 
 export const ShowAlert = () => {
 	const {theme} = useContext(AppContext);

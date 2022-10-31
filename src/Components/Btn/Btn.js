@@ -1,4 +1,4 @@
-export const Btn = ({handleClick, style, text, styleBtn}) => {
+export const Btn = ({handleClick, style, text}) => {
 	return (
 		<button 
 			aria-label='custom-btn'

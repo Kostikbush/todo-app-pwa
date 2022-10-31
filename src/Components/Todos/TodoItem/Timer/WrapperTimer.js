@@ -1,9 +1,11 @@
 import { useState, useEffect, useContext } from "react";
+import { CSSTransition } from "react-transition-group";
+
 import { TimeCreate } from "./TimeCreate";
 import { Timer } from "./Timer";
 import { AppContext } from "../../../../context/context";
 import { Alert } from "../../../Alert/Alert";
-import { CSSTransition } from "react-transition-group";
+
 
 
 export const WrapperTimer = ({todo}) => {

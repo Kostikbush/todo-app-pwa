@@ -1,10 +1,11 @@
 import React, { useContext, useState } from "react";
-import {AppContext} from "../../context/context";
-import {BsClockHistory} from 'react-icons/bs'
-import {MdPostAdd} from 'react-icons/md';
-import { WrapperTimeTodo } from "./TimerTodo/WrapperTimeTodo";
 import { useDispatch } from "react-redux";
 import { CSSTransition } from "react-transition-group";
+import {BsClockHistory} from 'react-icons/bs';
+import {MdPostAdd} from 'react-icons/md';
+
+import {AppContext} from "../../context/context";
+import { WrapperTimeTodo } from "./TimerTodo/WrapperTimeTodo";
 import { addTodo, arrSots, savedTodos } from "../../redux/action";
 
 const AddTodo = () => {

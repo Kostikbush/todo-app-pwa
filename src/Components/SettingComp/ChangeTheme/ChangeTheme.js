@@ -1,13 +1,14 @@
-import {AppContext} from "../../../context/context";
+import { CSSTransition } from "react-transition-group";
 import React, { useContext } from "react";
-import "./chengeTheme.scss";
+import { useDispatch } from "react-redux";
+
 import { useSetting } from "../../../customHooks/useSetting/useSetting";
 import { Btn } from "../../Btn/Btn";
-import { useDispatch } from "react-redux";
 import { changeTheme, savedSettings } from "../../../redux/action";
 import { handleThemeBody } from "../../../style-for-handle-theme/style-theme";
-import { CSSTransition } from "react-transition-group";
+import {AppContext} from "../../../context/context";
 import { BtnArrow } from "../../BtnArrow/BtnArrow";
+import "./chengeTheme.scss";
 
 export const ChangeTheme = () => {
 	const dispatch = useDispatch();

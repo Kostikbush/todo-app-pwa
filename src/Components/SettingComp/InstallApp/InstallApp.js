@@ -1,8 +1,10 @@
 import { useContext, useState } from "react";
+
 import { AppContext } from "../../../context/context";
-import "../SetTodos/setTodos.scss";
 import { Btn } from "../../Btn/Btn";
 import { BtnArrow } from "../../BtnArrow/BtnArrow";
+import "../SetTodos/setTodos.scss";
+
 export const InstallApp = () => {
 	const {theme} = useContext(AppContext);
 	const [showSet, setShowSet] = useState(false);
